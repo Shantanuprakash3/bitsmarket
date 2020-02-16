@@ -1,0 +1,14 @@
+<html>
+<head>
+</head>
+<body>
+
+<p> First Name : {{user.first_name}} </p>
+<p> Last Name : {{user.last_name}} </p>
+<p> Profile Image : <img src = {{userprofile.user_image.url}} > </p>
+{% for field in item.get_fields %}
+<p> {{field}} </p> 
+{% endfor %}
+</form>
+</body>
+</html>

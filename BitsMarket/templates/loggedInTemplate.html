@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+<p> Notifications </p>
+<ul>
+{% for notification in notifications %}
+<li> {{notification.message}} </li>
+{% endfor %}
+</ul>
+<p> <a href= "../uploadFile" > Upload File </a></p>
+<p> <a href= "../viewSelf" > View Self </a></p>
+<p> <a href= "../editSelf" > Edit Self </a></p>
+<p> <a href= "../logout" > Logout </a></p>
+</form>
+</body>
+</html>

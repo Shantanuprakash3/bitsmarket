@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BITSMarket</title>
+
+    <!-- Bootstrap Core CSS -->
+<link href="{% static 'css/bootstrap.min.css' %}"
+          rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+<link href="{% static 'css/3-col-portfolio.css' %}"
+          rel="stylesheet">
+</head>
+<body>
+	 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">BITSMarket</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href=""../../../../../../../sell"">Sell</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href=""../../../../../login"">Login</a>
+                    </li>
+                    <li><a href="#">Signup</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+{% for product in products %}
+<div class="col-md-4 portfolio-item">
+                <a href = "../../../../viewProduct?id={{product.id}}" >
+                    <img src = "{{product.image.url}}" >
+                </a>
+                <h3>
+                    <a href="#">Name : {{product.name}}</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+{% endfor %}
+
+<br>
+--------------------------------------------------------------------------------------------------------------------------------------
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; BITSMarket 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+</body>
+</body>
+</html>

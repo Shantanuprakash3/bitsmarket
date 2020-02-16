@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> Home </title>
+
+</head>
+<body>
+<p> <a href = "../../../../addProduct"> Add Product </a> </p>
+-------------------------------------------------
+{% for product in products %}
+<p> Image:  <img src = "{{product.image.url}}" >  </p>
+<p> {{product.details}} </p>
+<p> <a href = "../../../deleteProduct?id={{product.id}}" > Remove Product </a></p>
+{% endfor %}
+-------------------------------
+<p> <a href= "../viewSelf" > View Self </a></p>
+<p> <a href= "../editSelf" > Edit Self </a></p>
+<p> <a href= "../logout" > Logout </a></p>
+</form>
+</body>
+</html>

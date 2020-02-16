@@ -1,0 +1,32 @@
+
+<html lang="en">
+<head>
+
+</head>
+<body>
+{% if sell %}
+<p> You need an account to sell on BITS Market </p>
+<p> <a href = "../../../../../signUP"> Create an Account </a> Today </p>
+
+<p> Already a user ? Login here and happy selling </p>
+<form method = "POST" action = "" >
+{% csrf_token %}
+Username : <input type="text" name="userid" size="30" placeholder ="Your username"><br>
+Password : <input type="password" name="password" size="30" placeholder ="Your password">
+<input type = "submit" value = "Submit">
+</form>
+<p> <a href = "/user/password/reset" > Forgot Password </a> </p>
+{% else %}
+<form method = "POST" action = "" >
+{% csrf_token %}
+Username : <input type="text" name="userid" size="30" placeholder ="Your username"><br>
+Password : <input type="password" name="password" size="30" placeholder ="Your password">
+<input type = "submit" value = "Submit">
+</form>
+<p> <a href = "/user/password/reset" > Forgot Password </a> </p>
+<p> Not a user ?   <a href = "../../../../../signUP"> Sign UP  </a> Today </p>
+{% endif %}
+</body>
+</html>
+
+
